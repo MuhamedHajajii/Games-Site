@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Comic+Neue:wght@300;400;700&family=Nerko+One&display=swap');
+/* Start Global variables */
+:root {
+  --headersFonts:comic ,"Nerko", cursive;
+  --secondFonts:comic ,"Nerko", cursive;
+}
+body{
+  background-color: #272B30;
+}
+body #searchSection{
+  background-color: #272B30;
+  font-family: var(--secondFonts);
+}
+#searchSection .headerFonts {
+  font-family: var(--headersFonts);
+} 
+/* End Global variables */
+/* Start Header  */
+#searchSection header img {
+  object-fit: cover;
+  height: 30vh;
+  width: 100%;
+}
+/* End Header  */
+/* Start NavBar */
+#searchSection nav .container{
+  background-color: rgb(58, 73, 123) !important;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+  border-radius: 20px;
+  margin-top: -30px;
+}
+#searchSection nav {
+  position: sticky !important;
+  top: 0;
+  z-index: 5;
+}
+#searchSection nav h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+#searchSection nav img {
+  width: 40px;
+}
+#searchSection nav ul li a {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12.25px;
+  text-decoration: none;
+}
+#searchSection nav ul li {
+  margin: 0 15px;
+}
+#searchSection .navlink.active{
+  color: #09c !important;
+  transition: color 0.5s;
+}
+#searchSection .navlink{
+  transition: color 0.5s;
+}
+#searchSection .navlink:hover {
+  color: #09c !important;
+
+}
+/* End NavBar */
+/* Start Card */
+#searchSection .cardTitle {
+  font-size: 14px;
+}
+#searchSection .cardNAme{
+  font-size: 10.5px;
+}
+#searchSection .badge-color {
+  background-color: #32383E;
+}
+#searchSection .card p {
+  font-size: 12px;
+}
+#searchSection main .card {
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+  cursor: pointer;
+}
+#searchSection main .card:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+/* End Card */
+
+/* Start Loading  */
+  .loading {
+  position: fixed;
+  z-index: 99999999999999;
+  inset: 0;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: relative;
+}
+  .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    
+    transform: rotate(360deg);
+  }
+}
+/* End Loading  */
+
+  .details {
+  background-color: #27282B;
+  min-height: 100vh;
+}
+
+  .fw-700 {
+  font-weight: 700 !important;
+  font-size: 12px;
+}
+
+  .puffContainer {
+  position: fixed;
+  z-index: 555555555;
+  bottom: 5%;
+  right: 5%;
+}
+
+  .puff {
+  border-radius: 100vh;
+  width: 150px;
+  height: 50px;
+  background-image: url("../imges/123.gif");
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .puff {
+    width: 100px;
+  }
+  .puffArrow {
+    display: none !important;
+  }
+}
+.puff.two {
+  background-image: url("../imges/thumbnail.jpg");
+}
+.puffContainertwo {
+  position: fixed;
+  z-index: 555555555;
+  bottom: 5%;
+  left: 5%;
+}
+.puff:hover {
+  border: 1px solid #eee;
+}
+
+.puffArrow {
+animation: tempTitle 2s infinite alternate;
+}
+
+@keyframes tempTitle {
+  0% {
+    transform: translate(0);
+  }
+  5% {
+    transform: translateY(-10px);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.searchAnimation{
+  animation: searchSection 0.5s forwards;
+}
+
+@keyframes searchSection {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+.searchAnimationXX{
+  animation: searchSectionxx 0.5s forwards;
+}
+
+@keyframes searchSectionxx {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+.weatherAnimation{
+  animation: weatherSection 0.5s forwards;
+}
+
+@keyframes weatherSection {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+.weatherAnimationxxx{
+  animation: weatherSectionxxx 0.5s forwards;
+}
+
+@keyframes weatherSectionxxx {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.animationOpacity {
+  animation: opacity 1s forwards;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
